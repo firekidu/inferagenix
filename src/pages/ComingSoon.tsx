@@ -56,7 +56,7 @@ const ComingSoon = () => {
               {/* Left side - Company info */}
               <div className="text-muted-foreground text-sm mb-4 md:mb-0">
                 <div className="font-semibold">INFERAGENIX</div>
-                <div className="text-xs">Building the Future</div>
+                <div className="text-xs">Automated intelligence for smarter businesses</div>
               </div>
 
               {/* Center - Social Links */}
