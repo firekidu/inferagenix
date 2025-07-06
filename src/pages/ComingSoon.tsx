@@ -2,15 +2,12 @@ import Navigation from "@/components/Navigation";
 import ProgressBar from "@/components/ProgressBar";
 import SocialLinks from "@/components/SocialLinks";
 import cosmicBackground from "@/assets/cosmic-background.jpg";
-
 const ComingSoon = () => {
-  return (
-    <div className="min-h-screen relative overflow-hidden">
+  return <div className="min-h-screen relative overflow-hidden">
       {/* Cosmic Background */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${cosmicBackground})` }}
-      >
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${cosmicBackground})`
+    }}>
         <div className="absolute inset-0 bg-background/40"></div>
       </div>
 
@@ -69,10 +66,10 @@ const ComingSoon = () => {
 
               {/* Right side - Status indicators */}
               <div className="text-right text-muted-foreground text-sm space-y-1">
-                <div>01</div>
-                <div>02</div>
-                <div>03</div>
-                <div>04</div>
+                
+                
+                
+                
               </div>
             </div>
           </div>
@@ -81,21 +78,13 @@ const ComingSoon = () => {
 
       {/* Floating particles effect */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(50)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-primary/20 rounded-full floating"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 6}s`,
-              animationDuration: `${6 + Math.random() * 4}s`,
-            }}
-          />
-        ))}
+        {[...Array(50)].map((_, i) => <div key={i} className="absolute w-1 h-1 bg-primary/20 rounded-full floating" style={{
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 6}s`,
+        animationDuration: `${6 + Math.random() * 4}s`
+      }} />)}
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ComingSoon;
