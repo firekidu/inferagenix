@@ -25,7 +25,15 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map(item => {})}
+            {navItems.map(item => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="nav-item text-sm font-medium tracking-wider"
+              >
+                {item.name}
+              </a>
+            ))}
           </div>
 
           {/* Mobile Menu Button */}

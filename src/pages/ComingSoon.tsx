@@ -39,7 +39,7 @@ const ComingSoon = () => {
             {/* Description */}
             <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
               We're crafting something extraordinary. Inferagenix is building the future of 
-              intelligent systems and data analytics. Stay tuned for groundbreaking innovations.
+              intelligent AI workflow systems. Stay tuned for groundbreaking innovations.
             </p>
 
             {/* Call to Action */}
