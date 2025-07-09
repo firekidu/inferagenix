@@ -1,21 +1,14 @@
-FROM node:18-alpine
-
-# Set working directory
+# Build stage
+FROM node:18-alpine AS builder
 WORKDIR /app
-
-# Copy package files and install deps
 COPY package*.json ./
 RUN npm install
-
-# Copy the rest of your code
 COPY . .
-
-# Build your Vite app
 RUN npm run build
 
-# Expose the preview port
-EXPOSE 4173
+# Serve stage
+FROM nginx:alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
+EXPOSE 80
 
-# Run Vite preview server
-CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4173"]
 
